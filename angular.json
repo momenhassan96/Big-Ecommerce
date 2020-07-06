@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Big-ecommerce"
+    }
+  },
+  "defaultProject": "Big-ecommerce",
+  "cli": {
+    "analytics": false
+  }
 }
