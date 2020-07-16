@@ -1,0 +1,24 @@
+.mat-form-field-outline{
+    background-color: $white-color;
+}
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: #989898;
+}
+
+/* focused color */
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: #989898;
+}
+
+// /* floating label color */
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-label { 
+    color: #989898; 
+}
+
+/* Sets the underline to red if dirty and invalid */
+.mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick {
+    color: $error-color;
+}
+.mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-label {
+    color: $error-color;
+}

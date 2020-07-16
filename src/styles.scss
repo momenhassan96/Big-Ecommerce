@@ -28,5 +28,5 @@ $Big-ecommerce-theme: mat-light-theme($Big-ecommerce-primary, $Big-ecommerce-acc
 
 /* You can add global styles to this file, and also import other style files */
 @import './assets/styles/base';
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body { height: 100%;  color:#495057}
+body { margin: 0; font-size: 14px; }

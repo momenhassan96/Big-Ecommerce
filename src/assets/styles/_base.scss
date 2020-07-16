@@ -1,1 +1,34 @@
 @import './variables';
+@import './components/button.component';
+@import './components/inputs.component';
+
+h1,h2,h3,h4,h5,h6{
+    color:#222;
+}
+
+.global-margin-y{
+    margin : 15px 0;
+}
+
+.width-100{
+    width:100%;
+}
+
+@media screen and (min-width: 768px) {
+    .col-md-6{
+        max-width: 49% !important;
+    }
+}
+
+*::selection{
+    background-color:$main-color;
+    color:#fff;
+}
+
+.error-message{
+    color:$error-color;
+    font-size: .8rem;
+}
+
+
+

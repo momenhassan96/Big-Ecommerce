@@ -1,0 +1,132 @@
+<div class="container regestir-form">
+    <h3 class="regestir-form__header">New Account</h3>
+    <div class="row">
+        <form [formGroup]="registerForm" (ngSubmit)="register()" class="width-100">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-6 global-margin-y">
+                        <mat-form-field appearance="outline" class="width-100">
+                            <mat-label>Name:</mat-label>
+                            <input matInput formControlName="name">
+                            <mat-hint class="error-message" *ngIf="registerForm.get('name').touched && registerForm.get('name').value.length == 0">
+                                The 'Name' field cannot be blank.
+                            </mat-hint>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6 global-margin-y">
+                        <mat-form-field appearance="outline" class="width-100">
+                            <mat-label>Email:</mat-label>
+                            <input matInput formControlName="Email">
+                            <mat-hint class="error-message" *ngIf="registerForm.get('Email').touched &&registerForm.get('Email').value.length == 0">
+                                The 'Email' field cannot be blank.
+                            </mat-hint>
+                            <div></div>
+                            <mat-hint class="error-message" *ngIf="registerForm.get('Email').invalid && registerForm.get('Email').dirty &&registerForm.get('Email').value.length > 0">
+                                You must enter a valid email.
+                            </mat-hint>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 global-margin-y">
+                        <mat-form-field appearance="outline" class="width-100">
+                            <mat-label>Gender:</mat-label>
+                            <mat-select formControlName="Gender">
+                                <mat-option value="volvo">Volvo</mat-option>
+                                <mat-option>Saab</mat-option>
+                                <mat-option>Mercedes</mat-option>
+                                <mat-option>Mercedes</mat-option>
+                                <mat-option>Volvo</mat-option>
+                              </mat-select>
+                              <mat-hint class="error-message" *ngIf="registerForm.get('Gender').touched && registerForm.get('Gender').value.length == 0">
+                                The 'Gender' field cannot be blank.
+                            </mat-hint>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6 global-margin-y">
+                        <mat-form-field appearance="outline" class="width-100">
+                            <mat-label>Date Of Birth:</mat-label>
+                            <input matInput [matDatepicker]="dp3" formControlName="DateOfBirth">
+                            <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
+                            <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+                        </mat-form-field>
+                            <mat-hint class="error-message" *ngIf="registerForm.get('DateOfBirth').touched && registerForm.get('DateOfBirth').value.length == 0">
+                                The 'Date Of Birth' field cannot be blank.
+                            </mat-hint>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 global-margin-y">
+                        <mat-form-field appearance="outline" class="width-100">
+                            <mat-label>Address:</mat-label>
+                            <input matInput formControlName="Address">
+                            <mat-hint class="error-message" *ngIf="registerForm.get('Address').touched && registerForm.get('Address').value.length == 0">
+                                The 'Address' field cannot be blank.
+                            </mat-hint>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6 global-margin-y">
+                        <mat-form-field appearance="outline" class="width-100">
+                            <mat-label>Country:</mat-label>
+                            <mat-select formControlName="Country">
+                                <mat-option value="Egypt">Egypt</mat-option>
+                                <mat-option>US</mat-option>
+                                <mat-option>UK</mat-option>
+                                <mat-option>USA</mat-option>
+                                <mat-option>UE</mat-option>
+                              </mat-select>
+                              <mat-hint class="error-message" *ngIf="registerForm.get('Country').touched  && registerForm.get('Country').value.length == 0">
+                                The 'Country' field cannot be blank.
+                            </mat-hint>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 global-margin-y">
+                        <mat-form-field appearance="outline" class="width-100">
+                            <mat-label>City:</mat-label>
+                            <input matInput formControlName="City">
+                            <mat-hint class="error-message" *ngIf="registerForm.get('City').touched && registerForm.get('City').value.length == 0">
+                                The 'City' field cannot be blank.
+                            </mat-hint>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6 global-margin-y">
+                        <mat-form-field appearance="outline" class="width-100">
+                            <mat-label>Phone Number:</mat-label>
+                            <input matInput formControlName="phone" type="tel">
+                            <mat-hint class="error-message" *ngIf="registerForm.get('phone').touched && registerForm.get('phone').value.length == 0">
+                                The 'phone' field cannot be blank.
+                            </mat-hint>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 global-margin-y">
+                        <mat-form-field appearance="outline" class="width-100">
+                            <mat-label>Password:</mat-label>
+                            <input matInput formControlName="Password" type="password">
+                            <mat-hint class="error-message"  *ngIf="registerForm.get('Password').value.length < 6 && registerForm.get('Password').dirty && registerForm.get('Password').value.length > 0">Minimum 6 characters required</mat-hint>
+                            <mat-hint class="error-message" *ngIf="registerForm.get('Password').touched && registerForm.get('Password').value.length == 0">
+                                The 'Password' field cannot be blank.
+                            </mat-hint>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6 global-margin-y">
+                        <mat-form-field appearance="outline" class="width-100">
+                            <mat-label>Confirm Password:</mat-label>
+                            <input matInput formControlName="confirmPassword" type="password">
+                            <mat-hint class="error-message" *ngIf="registerForm.get('Password').value != registerForm.get('confirmPassword').value &&registerForm.get('confirmPassword').dirty &&registerForm.get('confirmPassword').value.length >0 ">The password confirmation does not match</mat-hint>
+                            <mat-hint class="error-message" *ngIf="registerForm.get('confirmPassword').touched &&registerForm.get('confirmPassword').value.length == 0">
+                                The 'Confirm Password' field cannot be blank.
+                            </mat-hint>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div class="regestir-form__button">
+                <button class="button-dark" [disabled]="registerForm.invalid">Create Account</button>
+            </div>
+        </form>
+    </div>
+</div>

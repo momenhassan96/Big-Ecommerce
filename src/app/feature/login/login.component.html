@@ -1,0 +1,47 @@
+<section>
+    <div class="container login">
+        <div class="row">
+            <div class="col-md-6 login__panel">
+                <!-- <div class="col-md-12"> -->
+                    <h3 class="login__header margin-bottom">Sign in</h3>
+                    <form [formGroup]="signInForm" (ngSubmit)="login()" class="width-100">
+                        <div class="global-margin-y">
+                            <mat-form-field appearance="outline" class="width-100">
+                                <mat-label>Email Address:</mat-label>
+                                <input matInput formControlName="email">
+                                <mat-hint class="error-message" *ngIf="signInForm.get('email').touched && signInForm.get('email').invalid && signInForm.get('email').dirty">
+                                    Your Email is invalid
+                                </mat-hint>
+                            </mat-form-field>
+                        </div>
+                        <div class="global-margin-y">
+                            <mat-form-field appearance="outline" class="width-100">
+                                <mat-label>Password:</mat-label>
+                                <input matInput type="password" formControlName="password">
+                            </mat-form-field>
+                        </div>
+                        <div class="login__button">
+                            <button class="button-dark" [disabled]="signInForm.invalid">Sign in</button>
+                        </div>
+                    </form>
+                <!-- </div> -->
+            </div>
+            <div class="col-md-6 col-xs-12 login__panel">
+                <h3 class="login__header margin-bottom">New Customer?</h3>
+                <div class="login__features">  
+                    <p class="login__features__paragraph">Create an account with us and you'll be able to:</p>
+                    <ul class="login__features__list">
+                        <li>Check out faster</li>
+                        <li>Save multiple shipping addresses</li>
+                        <li>Access your order history</li>
+                        <li>Track new orders</li>
+                        <li>Save items to your Wish List</li>
+                    </ul>                 
+                </div>
+                <div class="login__button">
+                    <button class="button-dark">Create Account</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

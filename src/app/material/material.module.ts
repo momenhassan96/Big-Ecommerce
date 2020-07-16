@@ -13,6 +13,11 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+// import { MatMomentDateModule } from "@angular/material-moment-adapter";
 
 @NgModule({
   declarations: [],
@@ -30,7 +35,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatStepperModule,
     MatTableModule,
     MatTabsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   exports:[
     MatProgressBarModule,
@@ -45,7 +54,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatStepperModule,
     MatTableModule,
     MatTabsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ]
 })
 export class MaterialModule { }

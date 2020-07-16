@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Big-ecommerce';
+  constructor(){}
+
+  // login(){
+  //   let params = {
+  //     "Username": "Mo'men",
+  //     "Password": "1234567899",
+  //   }
+  //   this.auth.login(params)
+  // }
 }
